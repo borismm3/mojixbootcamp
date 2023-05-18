@@ -34,7 +34,7 @@ namespace SeleniumTraining.src.code.test.todoly
             leftSite.ClickProjectName("MojixUpdateddddd");
             leftSite.subMenuIcon.Click();
             leftSite.deleteButton.Click();
-            session.Session.Instance().GetBrowser().SwitchTo().Alert().Accept();
+            session.Session.Instance.GetBrowser().SwitchTo().Alert().Accept();
 
             // add verificacion
             Assert.IsFalse(leftSite.ProjectNameIsDisplayed("MojixUpdateddddd"), "ERROR! The project was not deleted");

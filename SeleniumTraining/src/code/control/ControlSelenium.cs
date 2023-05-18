@@ -13,7 +13,7 @@ namespace SeleniumTraining.src.code.control
         public ControlSelenium(By locator) => this.locator = locator;
 
         protected void FindControl() => 
-            control = Session.Instance().GetBrowser().FindElement(locator);
+            control = Session.Instance.GetBrowser().FindElement(locator);
 
         public void Click()
         {
@@ -37,7 +37,7 @@ namespace SeleniumTraining.src.code.control
         public void WaitControlIsNotInThePage()
         {
             Thread.Sleep(500);
-            WebDriverWait wait = new(Session.Instance().GetBrowser(), TimeSpan.FromSeconds(5));
+            WebDriverWait wait = new(Session.Instance.GetBrowser(), TimeSpan.FromSeconds(5));
             try
             {
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(locator));
