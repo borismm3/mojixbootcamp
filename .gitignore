@@ -1,0 +1,39 @@
+# .gitignore for Selenium C# .NET 6.0 project
+
+# Visual Studio files
+.vs/
+bin/
+obj/
+
+# NuGet packages
+**/packages/
+
+# User-specific files
+*.userprefs
+*.suo
+*.user
+*.bak
+*.cache
+
+# Build results
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.zip
+*.VC.db
+*.VC.opendb
+*.VC.VC.opendb
