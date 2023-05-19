@@ -1,5 +1,6 @@
 # Selenium [yopmail.com](https://yopmail.com/) and [todoist.com](https://todoist.com/)
 CHALLENGE BOOTCAMP MOJIX: 
+
 Task 1 [yopmail.com](https://yopmail.com/). Send an email and check if the email has arrived 
 
 [Video task 1](https://github.com/borismm3/mojixbootcamp/assets/88692480/03fb0dda-4dea-4603-a5e8-ee5dd9d32a06)
