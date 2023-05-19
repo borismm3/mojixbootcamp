@@ -37,7 +37,7 @@ namespace SeleniumTraining.src.code.control
         public void WaitControlIsNotInThePage()
         {
             Thread.Sleep(500);
-            WebDriverWait wait = new(Session.Instance.GetBrowser(), TimeSpan.FromSeconds(5));
+            WebDriverWait wait = new(Session.Instance.GetBrowser(), TimeSpan.FromSeconds(15));
             try
             {
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(locator));
