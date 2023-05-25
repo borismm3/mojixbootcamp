@@ -12,32 +12,42 @@ namespace SeleniumTraining.src.code.test.todoly
         [TestMethod]
         public void VerifyCRUDProject()
         {
+            string projectName = "Mojix" + DateTime.Now.Ticks.ToString();
+            string projectNameUpdated = "Updated" + DateTime.Now.Ticks.ToString();
+
+            // Login
             mainPage.loginButton.Click();
             loginSection.Login("boris@gmail.com", "123456");
 
+            // New project
             leftSite.addNewProjectButton.Click();
-            leftSite.projectNameTxtBox.SetText("Mojix909090");
+            leftSite.projectNameTxtBox.SetText(projectName);
             leftSite.addButton.Click();
-
             // add verificacion
             Assert.IsTrue(leftSite.ProjectNameIsDisplayed("Mojix909090"), "ERROR! The project was not created");
 
-            leftSite.ClickProjectName("Mojix909090");
+            // Update project
+            leftSite.ClickProjectName(projectName);
             leftSite.subMenuIcon.Click();
             leftSite.editButton.Click();
-            leftSite.projectNameEditTxtBox.SetText("MojixUpdateddddd");
+            leftSite.projectNameEditTxtBox.SetText(projectNameUpdated);
             leftSite.saveButton.Click();
-
             // add verificacion
             Assert.IsTrue(leftSite.ProjectNameIsDisplayed("MojixUpdateddddd"), "ERROR! The project was not updated");
 
-            leftSite.ClickProjectName("MojixUpdateddddd");
+            // Create task
+
+            // Update task name, color, date
+
+            // Delete task
+
+            // Delete project
+            leftSite.ClickProjectName(projectNameUpdated);
             leftSite.subMenuIcon.Click();
             leftSite.deleteButton.Click();
             session.Session.Instance.GetBrowser().SwitchTo().Alert().Accept();
-
             // add verificacion
-            Assert.IsFalse(leftSite.ProjectNameIsDisplayed("MojixUpdateddddd"), "ERROR! The project was not deleted");
+            Assert.IsFalse(leftSite.ProjectNameIsDisplayed(projectNameUpdated), "ERROR! The project was not deleted");
         }
     }
 }
