@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumTraining.src.code.session;
 
@@ -8,7 +9,6 @@ namespace SeleniumTraining.src.code.control
     {
         protected By locator;
         protected IWebElement control;
-        //private static WebDriverWait explicitWait = new WebDriverWait(Session.Instance().GetBrowser(), TimeSpan.FromSeconds(5));
 
         public ControlSelenium(By locator) => this.locator = locator;
 
@@ -19,6 +19,18 @@ namespace SeleniumTraining.src.code.control
         {
             FindControl();
             control.Click();
+        }
+
+        public void Enter()
+        {
+            control.SendKeys(Keys.Enter);
+        }
+
+        public void HoverElement()
+        {
+            FindControl();
+            Actions action = new Actions(Session.Instance.GetBrowser());
+            action.MoveToElement(control).Perform();
         }
 
         public bool IsControlDisplayed()
@@ -37,7 +49,7 @@ namespace SeleniumTraining.src.code.control
         public void WaitControlIsNotInThePage()
         {
             Thread.Sleep(500);
-            WebDriverWait wait = new(Session.Instance.GetBrowser(), TimeSpan.FromSeconds(15));
+            WebDriverWait wait = new(Session.Instance.GetBrowser(), TimeSpan.FromSeconds(5));
             try
             {
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(locator));

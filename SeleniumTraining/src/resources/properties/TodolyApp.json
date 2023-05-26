@@ -1,0 +1,8 @@
+{
+  "AppSettings": {
+    "browser": "chrome",
+    "host": "https://todo.ly/",
+    "user": "boris@gmail.com",
+    "password": "123456"
+  }
+}
