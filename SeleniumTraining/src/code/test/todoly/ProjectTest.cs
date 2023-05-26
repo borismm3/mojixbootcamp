@@ -16,6 +16,8 @@ namespace SeleniumTraining.src.code.test.todoly
             // Login
             mainPage.loginButton.Click();
             loginSection.Login(user, pwd);
+            Assert.IsTrue(menuSection.logoutButton.IsControlDisplayed(),
+                "ERROR! The login was not successfully, review credentials please");
 
             // New project
             leftSite.addNewProjectButton.Click();

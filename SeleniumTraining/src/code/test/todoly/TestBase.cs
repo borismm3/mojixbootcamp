@@ -8,6 +8,7 @@ namespace SeleniumTraining.src.code.test
     {
         protected MainPage mainPage = new MainPage();
         protected LoginSection loginSection = new LoginSection();
+        protected MenuSection menuSection = new MenuSection();
         protected LeftSite leftSite = new LeftSite();
         protected TaskSection taskSection = new TaskSection();
         protected MenuTaskSection menuTaskSection = new MenuTaskSection();
