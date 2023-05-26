@@ -1,4 +1,4 @@
-# Selenium [todo.ly/](https://todo.ly/)
+# Selenium [todo.ly](https://todo.ly/)
 CHALLENGE BOOTCAMP MOJIX:
 
 Task: Automate CRUD test for project and task in [todo.ly/](https://todo.ly/)
